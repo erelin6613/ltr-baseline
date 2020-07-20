@@ -1,0 +1,23 @@
+{
+  "store" : "my_efi_feature_store",
+  "name" : "my_efi_model",
+  "class" : "org.apache.solr.ltr.model.LinearModel",
+  "features" : [
+    { "name" : "tfidf_sim_title" },
+    { "name" : "tfidf_sim_query" },
+    { "name" : "bm25_sim_title" },
+    { "name" : "bm25_sim_query" },
+    { "name" : "max_sim" },
+    { "name" : "original_score" }
+  ],
+  "params" : {
+    "weights" : {
+      "tfidf_sim_title" : 0.0,
+      "tfidf_sim_query" : 0.0,
+      "bm25_sim_title" : 0.0,
+      "bm25_sim_query" : 0.0,
+      "max_sim" : 0.0,
+      "original_score" : 1.0
+    }
+  }
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "store" : "my_efi_feature_store",
+    "name" : "tfidf_sim_title",
+    "class" : "org.apache.solr.ltr.feature.SolrFeature",
+    "params" : { "q" : "{!dismax qf=text_tfidf}${title}" }
+  },
+  {
+    "store" : "my_efi_feature_store",
+    "name" : "tfidf_sim_query",
+    "class" : "org.apache.solr.ltr.feature.SolrFeature",
+    "params" : { "q" : "{!dismax qf=text_tfidf}${query}" }
+  },
+  {
+    "store" : "my_efi_feature_store",
+    "name" : "bm25_sim_title",
+    "class" : "org.apache.solr.ltr.feature.SolrFeature",
+    "params" : { "q" : "{!dismax qf=text}${title}" }
+  },
+  {
+    "store" : "my_efi_feature_store",
+    "name" : "bm25_sim_query",
+    "class" : "org.apache.solr.ltr.feature.SolrFeature",
+    "params" : { "q" : "{!dismax qf=text}${query}" }
+  },
+  {
+    "store" : "my_efi_feature_store",
+    "name" : "max_sim",
+    "class" : "org.apache.solr.ltr.feature.SolrFeature",
+    "params" : { "q" : "{!dismax qf='text text_tfidf'}${text}" }
+  },
+  {
+    "store" : "my_efi_feature_store",
+    "name" : "original_score",
+    "class" : "org.apache.solr.ltr.feature.OriginalScoreFeature",
+    "params" : {}
+  }
+]
